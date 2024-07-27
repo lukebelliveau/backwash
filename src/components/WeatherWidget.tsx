@@ -121,7 +121,7 @@ const HourlyWeatherWidget = () => {
   return (
     <Card>
       <CardHeader>
-        <h2>{CITY} - Last 12 Hours Forecast</h2>
+        <h2>{CITY} - Current 12 Hours Forecast</h2>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>

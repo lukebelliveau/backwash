@@ -4,10 +4,10 @@ import WeatherWidget from "./components/WeatherWidget";
 const AppContainer = styled.div`
   text-align: center;
   padding: 20px;
+  color: white;
 `;
 
 const Title = styled.h1`
-  color: #333;
   font-size: 2em;
 `;
 
