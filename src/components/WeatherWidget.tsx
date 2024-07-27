@@ -63,7 +63,7 @@ const CustomTooltip = ({ active, payload, label }) => {
           border: "1px solid #ccc",
         }}
       >
-        <p>{`Day: ${payload[0].payload.day}`}</p>
+        <p>{`Date: ${payload[0].payload.date}`}</p>
         <p>{`Time: ${label}`}</p>
         <p>{`Temperature: ${payload[0].value}°C`}</p>
       </div>
@@ -103,7 +103,11 @@ const HourlyWeatherWidget = () => {
   const hourlyData = weatherData.list.map((item) => {
     const date = new Date(item.dt * 1000);
     return {
-      day: date.toLocaleDateString(undefined, { weekday: "long" }),
+      date: date.toLocaleDateString(undefined, {
+        month: "numeric",
+        day: "numeric",
+        year: "numeric",
+      }),
       time: date.toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
